@@ -15,61 +15,61 @@ export default function Home() {
   const panelsRef = useRef([]);
   const scrollTweenRef = useRef(null);
 
-  useLayoutEffect(() => {
-    // Function to handle scrolling to a specific section
-    const goToSection = (i) => {
-      scrollTweenRef.current = gsap.to(window, {
-        scrollTo: { y: i * window.innerHeight, autoKill: false },
-        onStart: () => {
-          ScrollTrigger.get().forEach((trigger) => trigger.disable());
-          ScrollTrigger.refresh();
-        },
-        duration: 1,
-        onComplete: () => (scrollTweenRef.current = null),
-        overwrite: true,
-      });
-    };
+  // useLayoutEffect(() => {
+  //   // Function to handle scrolling to a specific section
+  //   const goToSection = (i) => {
+  //     scrollTweenRef.current = gsap.to(window, {
+  //       scrollTo: { y: i * window.innerHeight, autoKill: false },
+  //       onStart: () => {
+  //         ScrollTrigger.get().forEach((trigger) => trigger.disable());
+  //         ScrollTrigger.refresh();
+  //       },
+  //       duration: 1,
+  //       onComplete: () => (scrollTweenRef.current = null),
+  //       overwrite: true,
+  //     });
+  //   };
 
-    // Event listener to prevent touchstart events from interfering with the scroll animation on touch devices
-    const onTouchStart = (e) => {
-      if (scrollTweenRef.current) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-      }
-    };
-    document.addEventListener("touchstart", onTouchStart, {
-      capture: true,
-      passive: false,
-    });
+  //   // Event listener to prevent touchstart events from interfering with the scroll animation on touch devices
+  //   const onTouchStart = (e) => {
+  //     if (scrollTweenRef.current) {
+  //       e.preventDefault();
+  //       e.stopImmediatePropagation();
+  //     }
+  //   };
+  //   document.addEventListener("touchstart", onTouchStart, {
+  //     capture: true,
+  //     passive: false,
+  //   });
 
-    // ScrollTrigger setup for each panel
-    panelsRef.current.forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top bottom",
-        end: "+=199%",
-        onToggle: (self) =>
-          self.isActive && !scrollTweenRef.current && goToSection(i),
-      });
-    });
+  //   // ScrollTrigger setup for each panel
+  //   panelsRef.current.forEach((panel, i) => {
+  //     ScrollTrigger.create({
+  //       trigger: panel,
+  //       start: "top bottom",
+  //       end: "+=199%",
+  //       onToggle: (self) =>
+  //         self.isActive && !scrollTweenRef.current && goToSection(i),
+  //     });
+  //   });
 
-    // ScrollTrigger setup for snapping to sections
-    ScrollTrigger.create({
-      start: 0,
-      end: "max",
-      snap: 1 / (panelsRef.current.length - 1),
-    });
+  //   // ScrollTrigger setup for snapping to sections
+  //   ScrollTrigger.create({
+  //     start: 0,
+  //     end: "max",
+  //     snap: 1 / (panelsRef.current.length - 1),
+  //   });
 
-    // Cleanup event listener and ScrollTrigger on component unmount
-    return () => {
-      document.removeEventListener("touchstart", onTouchStart, {
-        capture: true,
-        passive: false,
-      });
-      gsap.killTweensOf(window);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   // Cleanup event listener and ScrollTrigger on component unmount
+  //   return () => {
+  //     document.removeEventListener("touchstart", onTouchStart, {
+  //       capture: true,
+  //       passive: false,
+  //     });
+  //     gsap.killTweensOf(window);
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <>
