@@ -34,7 +34,7 @@ export function Nav() {
       >
         <motion.span
           variants={
-            ({ closed: { rotate: 0, y: 0 } }, { open: { rotate: 135, y: 6 } })
+            ({ closed: { rotate: 0, y: 0 } }, { open: { rotate: 135, y: 8 } })
           }
           className="m-0 block h-0.5 w-8 bg-gray-950 dark:bg-white"
         />
@@ -44,7 +44,7 @@ export function Nav() {
         />
         <motion.span
           variants={
-            ({ closed: { rotate: 0, y: 0 } }, { open: { rotate: -135, y: -6 } })
+            ({ closed: { rotate: 0, y: 0 } }, { open: { rotate: -135, y: -8 } })
           }
           className="m-0 block h-0.5 w-8 bg-gray-950 dark:bg-white"
         />
