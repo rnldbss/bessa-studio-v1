@@ -49,6 +49,9 @@ export function Nav() {
           className="m-0 block h-0.5 w-8 bg-gray-950 dark:bg-white"
         />
       </motion.button>
+      <div className="fixed bottom-4 right-4 sm:hidden">
+        <ThemeButton />
+      </div>
       <motion.div
         layout
         animate={openNav ? "open" : "closed"}

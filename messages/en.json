@@ -1,5 +1,13 @@
 {
+  "Nav": {
+    "linkOne": "home",
+    "linkTwo": "works",
+    "linkThree": "about"
+  },
   "Index": {
-    "title": "Where Vision Meets Reality: Shaping the Future of Web Experiences."
+    "title": "Where Vision Meets Reality: Shaping the Future of Web Experiences.",
+    "subheading": "Have a look",
+    "linkOne": "works",
+    "linkTwo": "about"
   }
 }

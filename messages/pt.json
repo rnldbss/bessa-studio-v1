@@ -1,5 +1,13 @@
 {
+  "Nav": {
+    "linkOne": "home",
+    "linkTwo": "projetos",
+    "linkThree": "sobre"
+  },
   "Index": {
-    "title": "Opa"
+    "title": "Opa",
+    "subheading": "Da uma olhada",
+    "linkOne": "projetos",
+    "linkTwo": "sobre"
   }
 }

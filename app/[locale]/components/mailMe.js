@@ -52,7 +52,7 @@ export function MailMe() {
         animate={openMail ? "open" : "closed"}
         transition={{ type: "spring", bounce: 0.15 }}
         variants={({ closed: { x: "0" } }, { open: { x: "-100%" } })}
-        className="fixed -right-[100vw] top-0  h-screen w-screen bg-slate-200 dark:bg-slate-400 md:-right-[50%] md:w-1/2 lg:-right-[35%] lg:w-[35%]"
+        className="fixed -right-[100vw] top-0  h-screen w-screen bg-slate-200 dark:bg-black md:-right-[50%] md:w-1/2 lg:-right-[35%] lg:w-[35%]"
       ></motion.div>
     </div>
   );
