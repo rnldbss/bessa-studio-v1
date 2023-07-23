@@ -1,6 +1,8 @@
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 
+import { NextIntlClientProvider } from "next-intl";
+
 import "./globals.css";
 import { Work_Sans } from "next/font/google";
 import { Nav } from "./components/nav";
@@ -11,25 +13,39 @@ import { Ball } from "./components/ball";
 
 const workSans = Work_Sans({ subsets: ["latin"] });
 
-export default function LocaleLayout({ children, params }) {
-  const locale = useLocale();
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "pt" }];
+}
 
-  if (params.locale !== locale) {
+export default async function LocaleLayout({ children, params: { locale } }) {
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
     notFound();
   }
+
+  // export default function LocaleLayout({ children, params }) {
+  //   const locale = useLocale();
+
+  //   if (params.locale !== locale) {
+  //     notFound();
+  //   }
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className=" dark:bg-gray-950 dark:text-white">
-        <Providers>
-          <main className={`${workSans.className}`}>
-            <Nav />
-            <MailMe />
-            <Social />
-            {children}
-            <Ball />
-          </main>
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>
+            <main className={`${workSans.className}`}>
+              <Nav />
+              <MailMe />
+              <Social />
+              {children}
+              <Ball />
+            </main>
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

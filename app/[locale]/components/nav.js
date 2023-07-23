@@ -57,7 +57,7 @@ export function Nav() {
         animate={openNav ? "open" : "closed"}
         transition={{ type: "spring", bounce: 0.15 }}
         variants={({ closed: { x: "-100%" } }, { open: { x: "100%" } })}
-        className=" fixed  -left-[90vw] flex h-5/6 w-[87vw] flex-col items-start  justify-between border-b-2 border-r-2 border-gray-950 bg-slate-200 px-10  py-24 dark:border-white dark:bg-gray-600 sm:hidden"
+        className=" fixed  -left-[90vw] flex h-5/6 w-[87vw] flex-col items-start  justify-between border-b-2 border-r-2 border-gray-950 bg-slate-200 px-10  py-24 dark:border-white dark:bg-gray-950  sm:hidden"
       >
         <motion.span className="text-4xl">bessa.dev</motion.span>
         <ul className=" flex flex-col gap-8 text-4xl uppercase">
