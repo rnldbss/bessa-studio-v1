@@ -15,7 +15,7 @@ const ThemeButton = () => {
         theme == "dark" ? setTheme("light") : setTheme("dark");
         cycleThemeIcon();
       }}
-      className=" grid grid-cols-1 grid-rows-1 text-xl dark:text-white"
+      className=" grid grid-cols-1 grid-rows-1 text-2xl dark:text-white"
     >
       <motion.div
         animate={themeIcon ? "open" : "closed"}
