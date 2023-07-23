@@ -7,7 +7,7 @@ import edenPic from "../images/eden.png";
 export default function Works() {
   const t = useTranslations("Eden");
   return (
-    <section className="grid h-screen grid-cols-12">
+    <section className="grid h-[100svh] grid-cols-12">
       <div className=" relative z-20 col-start-2 col-end-12 flex  flex-col gap-4 self-center  justify-self-center sm:col-start-3 lg:col-start-2">
         <div className="flex  flex-col lg:max-w-5xl lg:flex-row-reverse">
           <div className="">
