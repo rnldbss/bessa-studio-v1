@@ -11,10 +11,6 @@ import { Ball } from "./components/ball";
 
 const workSans = Work_Sans({ subsets: ["latin"] });
 
-export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "de" }];
-}
-
 export default function LocaleLayout({ children, params }) {
   const locale = useLocale();
 
