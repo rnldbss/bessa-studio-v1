@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
-import Link from "next/link";
-import ScrollIndicator from "./components/scrollIndicator";
+// import { useTranslations } from "next-intl";
+// import Link from "next/link";
+// import ScrollIndicator from "./components/scrollIndicator";
 import Home from "./components/home";
 
 export default function Index() {
-  const t = useTranslations("Index");
+  // const t = useTranslations("Index");
 
   return (
     <>
