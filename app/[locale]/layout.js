@@ -1,7 +1,6 @@
-import { NextIntlClientProvider } from "next-intl";
-
+import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-
+import { SmoothScroll } from "./components/smoothScroll";
 import "./globals.css";
 import { Work_Sans } from "next/font/google";
 import { Nav } from "./components/nav";
@@ -16,25 +15,18 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }];
 }
 
-export default async function LocaleLayout({ children, params: { locale } }) {
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
+export default function LocaleLayout({ children, params }) {
+  const locale = useLocale();
+
+  // Show a 404 error if the user requests an unknown locale
+  if (params.locale !== locale) {
     notFound();
   }
 
-  // export default function LocaleLayout({ children, params }) {
-  //   const locale = useLocale();
-
-  //   if (params.locale !== locale) {
-  //     notFound();
-  //   }
-
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className=" dark:bg-gray-950 dark:text-white">
-        <NextIntlClientProvider locale={locale} messages={messages}>
+    <SmoothScroll>
+      <html lang={locale} suppressHydrationWarning>
+        <body className=" dark:bg-gray-950 dark:text-white">
           <Providers>
             <main className={`${workSans.className}`}>
               <Nav />
@@ -44,8 +36,8 @@ export default async function LocaleLayout({ children, params: { locale } }) {
               <Ball />
             </main>
           </Providers>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </SmoothScroll>
   );
 }

@@ -1,15 +1,13 @@
-// import { useTranslations } from "next-intl";
-// import Link from "next/link";
-// import ScrollIndicator from "./components/scrollIndicator";
-import Home from "./components/home";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import ScrollIndicator from "./components/scrollIndicator";
 
 export default function Index() {
-  // const t = useTranslations("Index");
+  const t = useTranslations("Index");
 
   return (
     <>
-      <Home />
-      {/* <section className="grid h-[100dvh] grid-cols-12">
+      <section className="grid h-[100dvh] grid-cols-12">
         <div className="relative z-20 col-start-2 col-end-11 flex flex-col gap-4 self-center  sm:col-start-3 md:col-end-10 lg:col-start-2 lg:col-end-8">
           <h1 className="text-4xl">{t("title")}</h1>
           <p className="text-2xl">{t("subheading")}</p>
@@ -30,7 +28,7 @@ export default function Index() {
           <h2 className="text-2xl">{t("fSecTitle")}</h2>
           <p>{t("fSecBody")}</p>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
