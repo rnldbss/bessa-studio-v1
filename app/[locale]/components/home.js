@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="grid h-[100dvh] grid-cols-12"
+        className="grid h-[100lvh] grid-cols-12"
         ref={(el) => (sectionRefs.current[0] = el)}
       >
         <div className="relative z-20 col-start-2 col-end-11 flex flex-col gap-4 self-center  sm:col-start-3 md:col-end-10 lg:col-start-2 lg:col-end-8">
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       <section
-        className="grid h-[100dvh] grid-cols-12"
+        className="grid h-[100lvh] grid-cols-12"
         ref={(el) => (sectionRefs.current[1] = el)}
       >
         <div className="relative z-20 col-start-2 col-end-12 flex flex-col gap-4 self-center  sm:col-start-3 md:col-end-10 lg:col-start-2 lg:col-end-8">
