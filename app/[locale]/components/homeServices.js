@@ -1,17 +1,58 @@
 "use client";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Services({ secTitle, secBodyOne }) {
+  const servicesRef = useRef();
+
+  useLayoutEffect(() => {
+    let mm = gsap.matchMedia(servicesRef);
+
+    mm.add(
+      {
+        isMobile: "(max-width: 640px",
+        isDesktop: "(min-width: 641px)",
+      },
+      (context) => {
+        let { isMobile, isDesktop } = context.conditions;
+        gsap.to("#servicesTitle", {
+          scrollTrigger: {
+            trigger: "#servicesTitle",
+            pin: isMobile ? false : true,
+            start: "center center",
+            endTrigger: "#endTrigger",
+            end: "center center ",
+            markers: true,
+            pinSpacing: false,
+          },
+        });
+      },
+    );
+  });
+
   return (
-    <section className="flex min-h-[100dvh] place-items-center ">
-      <div className="relative  z-20  mb-20  grid  grid-cols-12 gap-4 lg:gap-10 ">
-        <h2 className=" col-start-2 col-end-12 break-normal text-5xl font-bold sm:col-start-3 sm:col-end-7 sm:leading-tight lg:col-end-6 lg:text-5xl xl:text-6xl">
+    <section
+      ref={servicesRef}
+      className="flex min-h-[100dvh] place-items-center "
+    >
+      <div
+        id="servicesWrapper"
+        className="relative  z-20  mb-20  grid  grid-cols-12 gap-4 lg:gap-10 "
+      >
+        <h2
+          id="servicesTitle"
+          className=" col-start-2 col-end-12 max-h-min self-start break-normal text-5xl font-bold sm:col-start-3 sm:col-end-7 sm:leading-tight lg:col-end-6 lg:text-5xl xl:text-6xl"
+        >
           {secTitle}
         </h2>
         <div className="col-start-2 col-end-12 flex flex-col gap-10 sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
-          <div className="min-h-[100lvh]">
+          <div className="flex flex-col justify-center sm:min-h-[60lvh]">
             <p>{secBodyOne}</p>
           </div>
-          <div className="min-h-[100lvh]">
+          <div className="flex  flex-col justify-center sm:min-h-[60lvh]">
             <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-500">
               Lorem ipsum dolor sit amet.
             </h3>
@@ -21,7 +62,10 @@ export function Services({ secTitle, secBodyOne }) {
               officia! Illum, voluptatem assumenda.
             </p>
           </div>
-          <div className="min-h-[100lvh]">
+          <div
+            id="endTrigger"
+            className="flex  flex-col justify-center sm:min-h-[60lvh]"
+          >
             <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-500">
               Lorem ipsum dolor sit amet.
             </h3>
