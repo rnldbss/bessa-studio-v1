@@ -34,7 +34,7 @@ export function MailMe() {
         </motion.div>
       </motion.button>
       <div className="fixed right-20 top-7">
-        <ul className="flex gap-3">
+        <ul className="flex gap-3 font-semibold">
           <li>
             <Link href="/" locale="en">
               EN
