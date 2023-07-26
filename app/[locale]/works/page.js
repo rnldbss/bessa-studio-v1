@@ -1,53 +1,43 @@
 import { useTranslations } from "next-intl";
 import { BiLinkExternal } from "react-icons/bi";
+import { Project } from "./components/project";
 
 import Image from "next/image";
 import edenPic from "../images/eden.png";
 
 export default function Works() {
-  const t = useTranslations("Eden");
+  const eden = useTranslations("Eden");
+  const plantCopy = useTranslations("PlantCopy");
   return (
     <section className="grid h-[100svh] max-h-[100svh] grid-cols-12">
-      <div className=" relative z-20 col-start-2 col-end-12 flex  flex-col gap-4 self-center  justify-self-center sm:col-start-3 lg:col-start-2">
-        <div className="flex  flex-col lg:max-w-5xl lg:flex-row-reverse">
-          <div className="">
-            <Image src={edenPic} className="" />
-          </div>
-          <div className="flex w-full flex-col justify-between gap-2 bg-slate-200 bg-opacity-50 px-4 py-4 dark:bg-black dark:bg-opacity-50 lg:max-w-2xl xl:px-7 xl:py-7">
-            <h2 className="text-xl">{t("title")}</h2>
-            <p>{t("body")}</p>
-            <ul className="flex gap-3">
-              <li>
-                <span className="text-sm dark:text-slate-400">
-                  {t("launch")}
-                </span>{" "}
-                <br />
-                {t("launchDate")}
-              </li>
-              <li>
-                <span className="text-sm dark:text-slate-400">{t("dev")} </span>{" "}
-                <br />
-                {t("devTech")}
-              </li>
-              <li>
-                <span className="text-sm dark:text-slate-400">
-                  {" "}
-                  {t("category")}
-                </span>{" "}
-                <br />
-                {t("categorySite")}
-              </li>
-            </ul>
-            <a
-              className=" uppercase"
-              href="https://eden-sanctuary.com/"
-              target="_blank"
-            >
-              {t("siteHref")} <BiLinkExternal className="inline text-xl" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <Project
+        title={eden("title")}
+        subtitle={eden("subtitle")}
+        body={eden("body")}
+        launch={eden("launch")}
+        launchDate={eden("launchDate")}
+        dev={eden("dev")}
+        devTech={eden("devTech")}
+        category={eden("category")}
+        categorySite={eden("categorySite")}
+        siteName={eden("siteName")}
+        siteHref={eden("siteHref")}
+        img={edenPic}
+      />
+      <Project
+        title={plantCopy("title")}
+        subtitle={plantCopy("subtitle")}
+        body={plantCopy("body")}
+        launch={plantCopy("launch")}
+        launchDate={plantCopy("launchDate")}
+        dev={plantCopy("dev")}
+        devTech={plantCopy("devTech")}
+        category={plantCopy("category")}
+        categorySite={plantCopy("categorySite")}
+        siteName={plantCopy("siteName")}
+        siteHref={plantCopy("siteHref")}
+        img={edenPic}
+      />
     </section>
   );
 }

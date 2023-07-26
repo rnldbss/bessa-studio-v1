@@ -16,6 +16,7 @@
   },
   "Eden": {
     "title": "Eden Sanctuary",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti minus doloremque itaque hic vitae ipsum a architecto enim, commodi explicabo consectetur, maiores ipsa! Illo officia, suscipit tempore accusantium minima quis.",
     "launch": "launched:",
     "launchDate": "2023",
@@ -23,6 +24,21 @@
     "devTech": "GatsbyJS",
     "category": "category:",
     "categorySite": "Retreat Center",
-    "siteHref": "eden-sanctuary.com"
+    "siteName": "eden-sanctuary.com",
+    "siteHref": "https://eden-sanctuary.com"
+  },
+  "PlantCopy": {
+    "title": "Plant Copy",
+
+    "subtitle": "Lorem ipsum dolor sit amet consectetur",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti minus doloremque itaque hic vitae ipsum a architecto enim, commodi explicabo consectetur, maiores ipsa! Illo officia, suscipit tempore accusantium minima quis.",
+    "launch": "launched:",
+    "launchDate": "2023",
+    "dev": "development:",
+    "devTech": "GatsbyJS + Sanity",
+    "category": "category:",
+    "categorySite": "Portfolio",
+    "siteName": "plantcopy.com",
+    "siteHref": "https://plantcopy.com"
   }
 }

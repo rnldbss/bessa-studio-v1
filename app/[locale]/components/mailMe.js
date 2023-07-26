@@ -3,6 +3,7 @@ import { motion, useCycle } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import Link from "next-intl/link";
+import { ContactForm } from "./form";
 
 export function MailMe() {
   const [openMail, cycleOpenMail] = useCycle(false, true);
@@ -53,7 +54,9 @@ export function MailMe() {
         transition={{ type: "spring", bounce: 0.15 }}
         variants={({ closed: { x: "0" } }, { open: { x: "-100%" } })}
         className="fixed -right-[100vw] top-0  h-screen w-screen bg-slate-200 dark:bg-black md:-right-[50%] md:w-1/2 lg:-right-[35%] lg:w-[35%]"
-      ></motion.div>
+      >
+        <ContactForm />
+      </motion.div>
     </div>
   );
 }

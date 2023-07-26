@@ -32,11 +32,21 @@ export function Services({ secTitle, secBodyOne }) {
           scrollTrigger: {
             trigger: "#purpleLine",
             start: "top center",
-            markers: true,
           },
           height: 0,
           duration: 2,
           ease: "power2.out",
+        });
+        gsap.to("#body", {
+          scrollTrigger: {
+            trigger: "#body",
+            start: "top-=200px center",
+            endTrigger: "#body",
+            end: "top center",
+            scrub: 3,
+            markers: true,
+          },
+          scale: isMobile ? 1 : 1.2,
         });
       },
     );
@@ -54,7 +64,7 @@ export function Services({ secTitle, secBodyOne }) {
       >
         <div
           id="servicesTitle"
-          className="col-start-2 col-end-12 mt-20 flex max-h-min  gap-2 self-start sm:col-start-3 sm:col-end-7  lg:col-end-6 "
+          className="col-start-2 col-end-12  flex max-h-min  gap-2 self-start sm:col-start-3 sm:col-end-7  lg:col-end-6 "
         >
           <div
             id="purpleLine"
@@ -66,11 +76,14 @@ export function Services({ secTitle, secBodyOne }) {
         </div>
 
         <div className="col-start-2 col-end-12 flex flex-col  sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
-          <div className="flex flex-col justify-center text-lg sm:min-h-[60lvh]">
+          <div
+            id="body"
+            className="flex flex-col justify-center text-lg sm:min-h-[60lvh]"
+          >
             <p>{secBodyOne}</p>
           </div>
           <div className="flex  flex-col justify-center sm:min-h-[60lvh]">
-            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-500 lg:text-4xl">
+            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-600 lg:text-4xl">
               Lorem ipsum dolor sit amet.
             </h3>
             <p>
@@ -83,7 +96,7 @@ export function Services({ secTitle, secBodyOne }) {
             id="endTrigger"
             className="flex  flex-col justify-center sm:min-h-[60lvh]"
           >
-            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-500 lg:text-4xl">
+            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-600 lg:text-4xl">
               Lorem ipsum dolor sit amet.
             </h3>
             <p>

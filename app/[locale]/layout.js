@@ -1,6 +1,6 @@
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { SmoothScroll } from "./components/smoothScroll";
+// import { SmoothScroll } from "./components/smoothScroll";
 import "./globals.css";
 import { Work_Sans } from "next/font/google";
 import { Nav } from "./components/nav";
@@ -20,20 +20,20 @@ export default function LocaleLayout({ children, params }) {
   }
 
   return (
-    <SmoothScroll>
-      <html lang={locale} suppressHydrationWarning>
-        <body className=" dark:bg-gray-950 dark:text-white">
-          <Providers>
-            <main className={`${workSans.className}`}>
-              <Nav />
-              <MailMe />
-              <Social />
-              {children}
-              <Ball />
-            </main>
-          </Providers>
-        </body>
-      </html>
-    </SmoothScroll>
+    // <SmoothScroll>
+    <html lang={locale} suppressHydrationWarning>
+      <body className=" dark:bg-gray-950 dark:text-white">
+        <Providers>
+          <main className={`${workSans.className}`}>
+            <Nav />
+            <MailMe />
+            <Social />
+            {children}
+            <Ball />
+          </main>
+        </Providers>
+      </body>
+    </html>
+    // </SmoothScroll>
   );
 }

@@ -18,7 +18,7 @@ export function Ball() {
   useEffect(() => {
     gsap.to(ballRef.current, {
       rotation: "+=360",
-      duration: 25,
+      duration: 20,
       repeat: -1,
     });
 
