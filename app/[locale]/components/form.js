@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { GrFormNext } from "react-icons/gr";
-import { GrFormPrevious } from "react-icons/gr";
+
+import { MdOutlineNavigateBefore } from "react-icons/md";
+import { MdOutlineNavigateNext } from "react-icons/md";
 
 export const ContactForm = () => {
   const [isSubmitted, setSubmitted] = useState(false);
@@ -139,7 +140,9 @@ export const ContactForm = () => {
           type="submit"
         >
           Submit
-          <GrFormNext className="inline" />
+          <span className="text-3xl text-violet-600">
+            <MdOutlineNavigateNext />
+          </span>
         </motion.button>
         <div
           id="formItems"
@@ -175,7 +178,9 @@ export const ContactForm = () => {
           >
             3
           </motion.span>
-          <span className="col-start-2 col-end-2 row-start-1 row-end-1">/</span>
+          <span className="col-start-2 col-end-2 row-start-1 row-end-1 font-extrabold text-violet-600">
+            /
+          </span>
           <span className="col-start-3 col-end-3 row-start-1 row-end-1">3</span>
         </div>
       </form>
@@ -185,7 +190,9 @@ export const ContactForm = () => {
           className="flex cursor-pointer items-center font-semibold"
           onClick={handlePrevious}
         >
-          <GrFormPrevious />
+          <span className="text-3xl text-violet-600">
+            <MdOutlineNavigateBefore />
+          </span>
           <span>previous</span>
         </div>
         <motion.div
@@ -196,7 +203,9 @@ export const ContactForm = () => {
           onClick={handleNext}
         >
           <span>next</span>
-          <GrFormNext />
+          <span className="text-3xl text-violet-600">
+            <MdOutlineNavigateNext />
+          </span>
         </motion.div>
       </div>
     </div>

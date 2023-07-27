@@ -59,7 +59,7 @@ export function Services({ secTitle, secBodyOne }) {
         >
           <div
             id="purpleLine"
-            className="hidden w-1 shrink-0 bg-violet-600 sm:ml-px sm:inline-block sm:h-full "
+            className="hidden w-0.5 shrink-0 bg-gradient-to-t from-transparent via-violet-700 sm:ml-px sm:inline-block sm:h-full "
           ></div>
           <h2 className=" text-5xl  font-bold lg:text-5xl xl:text-6xl">
             {secTitle}

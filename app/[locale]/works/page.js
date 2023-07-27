@@ -1,15 +1,15 @@
 import { useTranslations } from "next-intl";
-import { BiLinkExternal } from "react-icons/bi";
 import { Project } from "./components/project";
-
-import Image from "next/image";
+import { NavBar } from "./components/navBar";
 import edenPic from "../images/eden.png";
+import plantCopyPic from "../images/plantcopy.png";
 
 export default function Works() {
   const eden = useTranslations("Eden");
   const plantCopy = useTranslations("PlantCopy");
   return (
     <section className="grid h-[100svh] max-h-[100svh] grid-cols-12">
+      <NavBar />
       <Project
         title={eden("title")}
         subtitle={eden("subtitle")}
@@ -36,7 +36,7 @@ export default function Works() {
         categorySite={plantCopy("categorySite")}
         siteName={plantCopy("siteName")}
         siteHref={plantCopy("siteHref")}
-        img={edenPic}
+        img={plantCopyPic}
       />
     </section>
   );
