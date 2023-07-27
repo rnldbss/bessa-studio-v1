@@ -16,7 +16,7 @@ function useMenuAnimation(openMail) {
         ? { opacity: 1, filter: "blur(0px)", y: 0 }
         : { opacity: 0, filter: "blur(5px)", y: 50 },
       {
-        duration: 0.5,
+        duration: 0.3,
         delay: openMail ? staggerMenuItems : 0,
       },
     );

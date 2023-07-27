@@ -91,7 +91,6 @@ export const ContactForm = () => {
           ></textarea>
         </motion.div>
         <motion.div
-          id="formItems"
           animate={activeInput === 1 ? "visible" : "hidden"}
           variants={variants}
           className="col-start-1 col-end-1 row-start-1 row-end-1 flex flex-col gap-2"
@@ -112,7 +111,6 @@ export const ContactForm = () => {
           />
         </motion.div>
         <motion.div
-          id="formItems"
           className="col-start-1 col-end-1 row-start-1 row-end-1 flex flex-col gap-2"
           animate={activeInput === 2 ? "visible" : "hidden"}
           variants={variants}
