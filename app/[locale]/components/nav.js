@@ -2,12 +2,33 @@
 
 import Link from "next/link";
 import ThemeButton from "./themeButton";
-import { motion, useCycle } from "framer-motion";
+import { motion, stagger, useCycle, useAnimate } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
+import { useEffect } from "react";
+
+const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+function useMenuAnimation(openNav) {
+  const [scope, animate] = useAnimate();
+  useEffect(() => {
+    animate(
+      "#mobNavItems",
+      openNav
+        ? { opacity: 1, filter: "blur(0px)", y: 0 }
+        : { opacity: 0, filter: "blur(5px)", y: 50 },
+      {
+        duration: 0.5,
+        delay: openNav ? staggerMenuItems : 0,
+      },
+    );
+  }, [openNav]);
+
+  return scope;
+}
 
 export function Nav() {
   const [openNav, cycleOpenNav] = useCycle(false, true);
+  const scope = useMenuAnimation(openNav);
 
   return (
     <nav className="relative z-40">
@@ -52,36 +73,41 @@ export function Nav() {
       <div className="fixed bottom-4 right-4 sm:hidden">
         <ThemeButton />
       </div>
+
+      {/* Mobile Nav */}
       <motion.div
+        ref={scope}
         layout
         animate={openNav ? "open" : "closed"}
         transition={{ type: "spring", bounce: 0.15 }}
         variants={({ closed: { x: "-100%" } }, { open: { x: "100%" } })}
         className=" fixed  -left-[90vw] flex h-5/6 w-[87vw] flex-col items-start  justify-between border-b-2 border-r-2 border-gray-950 bg-slate-200 px-10  py-24 dark:border-white dark:bg-gray-950  sm:hidden"
       >
-        <motion.span className="text-4xl">bessa.dev</motion.span>
+        <motion.span id="mobNavItems" className="text-4xl">
+          bessa.dev
+        </motion.span>
         <ul className=" flex flex-col gap-8 text-4xl uppercase">
-          <motion.li>
+          <motion.li id="mobNavItems">
             <Link onClick={() => cycleOpenNav()} href="/">
               home
             </Link>
           </motion.li>
-          <motion.li>
+          <motion.li id="mobNavItems">
             <Link onClick={() => cycleOpenNav()} href="/works">
               works
             </Link>
           </motion.li>
-          <motion.li>
+          <motion.li id="mobNavItems">
             <Link onClick={() => cycleOpenNav()} href="/works">
               about
             </Link>
           </motion.li>
         </ul>
         <motion.ul className="flex gap-4 text-3xl ">
-          <li>
+          <li id="mobNavItems">
             <BsLinkedin />
           </li>
-          <li>
+          <li id="mobNavItems">
             <BsGithub />
           </li>
         </motion.ul>

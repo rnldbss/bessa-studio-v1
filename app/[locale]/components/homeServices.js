@@ -32,21 +32,12 @@ export function Services({ secTitle, secBodyOne }) {
           scrollTrigger: {
             trigger: "#purpleLine",
             start: "top center",
+            endTrigger: "#endTrigger",
+            end: "bottom center ",
+            scrub: 2,
           },
           height: 0,
-          duration: 2,
           ease: "power2.out",
-        });
-        gsap.to("#body", {
-          scrollTrigger: {
-            trigger: "#body",
-            start: "top-=200px center",
-            endTrigger: "#body",
-            end: "top center",
-            scrub: 3,
-            markers: true,
-          },
-          scale: isMobile ? 1 : 1.2,
         });
       },
     );
@@ -60,17 +51,17 @@ export function Services({ secTitle, secBodyOne }) {
     >
       <div
         id="servicesWrapper"
-        className="relative  z-20  mb-20  grid  grid-cols-12 gap-1 "
+        className="relative  z-20  mb-20  grid  grid-cols-12 gap-3 "
       >
         <div
           id="servicesTitle"
-          className="col-start-2 col-end-12  flex max-h-min  gap-2 self-start sm:col-start-3 sm:col-end-7  lg:col-end-6 "
+          className="col-start-2 col-end-12  flex max-h-min   gap-2 self-start sm:col-start-3 sm:col-end-7 lg:col-end-6 "
         >
           <div
             id="purpleLine"
-            className="hidden bg-violet-600 sm:ml-px sm:inline-block sm:h-full sm:w-2 "
+            className="hidden w-1 shrink-0 bg-violet-600 sm:ml-px sm:inline-block sm:h-full "
           ></div>
-          <h2 className=" text-5xl font-bold  lg:text-5xl xl:text-6xl">
+          <h2 className=" text-5xl  font-bold lg:text-5xl xl:text-6xl">
             {secTitle}
           </h2>
         </div>
@@ -78,7 +69,7 @@ export function Services({ secTitle, secBodyOne }) {
         <div className="col-start-2 col-end-12 flex flex-col  sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
           <div
             id="body"
-            className="flex flex-col justify-center text-lg sm:min-h-[60lvh]"
+            className="flex flex-col justify-center text-xl sm:min-h-[60lvh]"
           >
             <p>{secBodyOne}</p>
           </div>
