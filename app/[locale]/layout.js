@@ -1,4 +1,5 @@
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { SmoothScroll } from "./components/smoothScroll";
 import "./globals.css";
@@ -13,6 +14,7 @@ const workSans = Work_Sans({ subsets: ["latin"] });
 
 export default function LocaleLayout({ children, params }) {
   const locale = useLocale();
+  const form = useTranslations("Form");
 
   // Show a 404 error if the user requests an unknown locale
   if (params.locale !== locale) {
@@ -26,7 +28,12 @@ export default function LocaleLayout({ children, params }) {
           <Providers>
             <main className={`${workSans.className}`}>
               <Nav />
-              <MailMe />
+              <MailMe
+                formTitle={form("title")}
+                formMessage={form("message")}
+                formName={form("name")}
+                formEmail={form("email")}
+              />
               <Social />
               {children}
               <Ball />

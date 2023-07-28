@@ -11,7 +11,7 @@ export default function Index() {
   return (
     <>
       <section className="grid h-[100dvh] grid-cols-12">
-        <div className="relative z-20 col-start-2 col-end-11 flex flex-col gap-4 self-center  sm:col-start-3 md:col-end-10  lg:col-end-10 xl:col-end-8">
+        <div className="relative z-20 col-start-2 col-end-11 flex flex-col gap-4 self-center  sm:col-start-3 md:col-end-10  lg:col-end-10 xl:col-end-10">
           <h1 className="text-4xl font-semibold sm:text-5xl lg:text-6xl">
             {t("title")}
           </h1>

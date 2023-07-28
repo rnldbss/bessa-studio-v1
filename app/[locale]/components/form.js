@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 import { MdOutlineNavigateBefore } from "react-icons/md";
 import { MdOutlineNavigateNext } from "react-icons/md";
 
-export const ContactForm = () => {
+export const ContactForm = ({
+  formMessage,
+  formName,
+  formTitle,
+  formEmail,
+}) => {
   const [isSubmitted, setSubmitted] = useState(false);
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
@@ -64,7 +69,7 @@ export const ContactForm = () => {
   ) : (
     <div className="flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3">
       <h2 id="formItems" className="text-5xl font-semibold">
-        Ready?
+        {formTitle}
       </h2>
       <form
         onSubmit={handleSubmit}
@@ -80,7 +85,7 @@ export const ContactForm = () => {
             className="text-2xl font-medium dark:text-white"
             htmlFor="message"
           >
-            Message
+            {formMessage}
           </label>
           <textarea
             className="bg-transparent outline-none"
@@ -100,7 +105,7 @@ export const ContactForm = () => {
             className="text-2xl font-medium dark:text-white"
             htmlFor="name"
           >
-            Name
+            {formName}
           </label>
           <input
             className="bg-transparent outline-none"
@@ -120,13 +125,13 @@ export const ContactForm = () => {
             className="text-2xl font-medium dark:text-white"
             htmlFor="email"
           >
-            Email
+            {formEmail}
           </label>
           <input
             className="bg-transparent outline-none"
             id="email"
             type="email"
-            placeholder="email"
+            placeholder="example@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
@@ -136,7 +141,7 @@ export const ContactForm = () => {
           id="formItems"
           animate={activeInput === 2 ? "visible" : "hidden"}
           variants={variants}
-          className="absolute -bottom-[105px] right-0 flex items-center font-semibold"
+          className="absolute -bottom-[110px] right-0 flex items-center font-semibold"
           type="submit"
         >
           Submit

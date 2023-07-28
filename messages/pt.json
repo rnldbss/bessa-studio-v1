@@ -55,5 +55,11 @@
     "categorySite": "Portfolio",
     "siteName": "plantcopy.com",
     "siteHref": "https://plantcopy.com"
+  },
+  "Form": {
+    "title": "Let's build your website",
+    "message": "Tell me briefly what you need",
+    "name": "Name",
+    "email": "Email"
   }
 }

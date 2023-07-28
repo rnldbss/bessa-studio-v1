@@ -24,7 +24,7 @@ function useMenuAnimation(openMail) {
   return scope;
 }
 
-export function MailMe() {
+export function MailMe({ formTitle, formMessage, formName, formEmail }) {
   const [openMail, cycleOpenMail] = useCycle(false, true);
   const scope = useMenuAnimation(openMail);
 
@@ -73,9 +73,16 @@ export function MailMe() {
         animate={openMail ? "open" : "closed"}
         transition={{ type: "spring", bounce: 0.15 }}
         variants={({ closed: { x: "0" } }, { open: { x: "-100%" } })}
-        className="fixed -right-[100vw] top-0  flex h-screen w-screen place-content-center place-items-center bg-slate-200 dark:bg-black md:-right-[50%] md:w-1/2 lg:-right-[35%] lg:w-[35%]"
+        className={`fixed -right-[100vw] top-0  flex h-screen w-screen place-content-center place-items-center bg-slate-200 dark:bg-black md:-right-[50%] md:w-1/2 lg:-right-[35%] lg:w-[35%] ${
+          openMail ? "shadow-xl  shadow-slate-600" : ""
+        }`}
       >
-        <ContactForm />
+        <ContactForm
+          formTitle={formTitle}
+          formMessage={formMessage}
+          formName={formName}
+          formEmail={formEmail}
+        />
       </motion.div>
     </div>
   );

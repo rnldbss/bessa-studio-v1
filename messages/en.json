@@ -30,8 +30,8 @@
   },
   "Eden": {
     "title": "Eden Sanctuary",
-    "subtitle": "Lorem ipsum dolor sit amet consectetur",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti minus doloremque itaque hic vitae ipsum a architecto enim, commodi explicabo consectetur, maiores ipsa! Illo officia, suscipit tempore accusantium minima quis.",
+    "subtitle": "Retreat Center in Brazil",
+    "body": "Eden Sanctuary is a retreat center that offers accommodation and holds plant-medicine retreats. They needed a stylish website that conveyed the beauty of their space and encouraged readers to get in contact. My aim was to drive visitors to submit a contact form. This website also includes many photos, which I incorporated elegantly into the design.",
     "launch": "launched:",
     "launchDate": "2023",
     "dev": "development:",
@@ -43,9 +43,8 @@
   },
   "PlantCopy": {
     "title": "Plant Copy",
-
-    "subtitle": "Lorem ipsum dolor sit amet consectetur",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti minus doloremque itaque hic vitae ipsum a architecto enim, commodi explicabo consectetur, maiores ipsa! Illo officia, suscipit tempore accusantium minima quis.",
+    "subtitle": "Freelance Copywriter",
+    "body": "Plant Copy provides copywriting services to sustainable brands. They needed a cohesive website that described their background, services, and drove visitors to contact them through their form. My goal was to make the transition to the contact form as natural as possible, as well as create a design that embodied the green and environmental style of the brand. I also added a content management system, making it easy for them to upload content and edit their website whenever they see fit.",
     "launch": "launched:",
     "launchDate": "2023",
     "dev": "development:",
@@ -54,5 +53,12 @@
     "categorySite": "Portfolio",
     "siteName": "plantcopy.com",
     "siteHref": "https://plantcopy.com"
+  },
+
+  "Form": {
+    "title": "Let's build your website",
+    "message": "Tell me briefly what you need",
+    "name": "Name",
+    "email": "Email"
   }
 }

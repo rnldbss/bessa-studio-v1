@@ -36,39 +36,43 @@ export function Project({
           <Image
             src={img}
             placeholder="blur"
-            className="shadow-lg shadow-slate-600 dark:shadow-slate-600"
+            className="shadow-lg shadow-slate-600"
             alt={alt}
           />
         </div>
 
-        <div className="flex flex-col justify-between gap-2  py-4 lg:w-4/5  lg:max-w-2xl xl:px-7 xl:py-7">
+        <div className="flex flex-col justify-between gap-2  pb-4 pt-4 lg:w-4/5 lg:max-w-2xl  lg:pt-0 xl:px-7 xl:py-7">
           <h2 className="text-3xl font-semibold lg:text-4xl">{title}</h2>
           <h3 className="text-xl font-medium lg:text-2xl">{subtitle}</h3>
           <p className="text-lg">{body}</p>
           <ul className="flex gap-3">
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-800">
+              <span className="dark:text- text-sm font-medium text-violet-800 dark:text-slate-400">
                 {launch}
               </span>
               <br />
               {launchDate}
             </li>
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-800">
+              <span className="dark:text- text-sm font-medium text-violet-800 dark:text-slate-400">
                 {dev}{" "}
               </span>
               <br />
               {devTech}
             </li>
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-800">
+              <span className="dark:text- text-sm font-medium text-violet-800 dark:text-slate-400">
                 {category}
               </span>
               <br />
               {categorySite}
             </li>
           </ul>
-          <a className=" font-medium uppercase" href={siteHref} target="_blank">
+          <a
+            className=" font-medium uppercase hover:text-violet-700 dark:hover:text-violet-400"
+            href={siteHref}
+            target="_blank"
+          >
             {siteName} <BiLinkExternal className="inline text-xl" />
           </a>
         </div>

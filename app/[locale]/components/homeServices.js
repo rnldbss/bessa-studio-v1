@@ -46,6 +46,33 @@ export function Services({
           height: 0,
           ease: "power2.out",
         });
+        gsap.from("#one", {
+          scrollTrigger: {
+            trigger: "#one",
+            start: "top bottom-=300px",
+          },
+          autoAlpha: 0,
+          yPercent: 30,
+          duration: 1,
+        });
+        gsap.from("#two", {
+          scrollTrigger: {
+            trigger: "#two",
+            start: "top bottom-=300px",
+          },
+          autoAlpha: 0,
+          yPercent: 30,
+          duration: 1,
+        });
+        gsap.from("#endTrigger", {
+          scrollTrigger: {
+            trigger: "#endTrigger",
+            start: "top bottom-=300px",
+          },
+          autoAlpha: 0,
+          yPercent: 30,
+          duration: 1,
+        });
       },
     );
     return () => mm.revert();
@@ -58,7 +85,7 @@ export function Services({
     >
       <div
         id="servicesWrapper"
-        className="relative  z-20  mb-20  grid  grid-cols-12 gap-3 "
+        className="relative  z-20  mb-20  grid  grid-cols-12 gap-4 "
       >
         <div
           id="servicesTitle"
@@ -73,14 +100,17 @@ export function Services({
           </h2>
         </div>
 
-        <div className="col-start-2 col-end-12 flex flex-col gap-16  sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
+        <div className="col-start-2 col-end-12 flex flex-col gap-16  sm:col-start-7 sm:col-end-12 lg:col-start-6 lg:col-end-11  xl:col-end-10">
           <div
-            id="body"
+            id="one"
             className="flex flex-col justify-center text-xl sm:min-h-[60lvh]"
           >
             <p>{secBodyOne}</p>
           </div>
-          <div className="flex  flex-col justify-center sm:min-h-[60lvh]">
+          <div
+            id="two"
+            className="  flex flex-col justify-center sm:min-h-[60lvh]"
+          >
             <h3 className=" text-3xl font-semibold text-violet-800 dark:text-violet-600 lg:text-4xl">
               {secFeatTitleOne}
             </h3>
