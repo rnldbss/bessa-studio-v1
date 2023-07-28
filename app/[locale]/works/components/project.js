@@ -32,8 +32,13 @@ export function Project({
       className="relative z-20 col-start-2 col-end-12 row-start-1 row-end-1  flex max-w-[1150px] flex-col justify-center gap-4 pt-12 sm:col-start-3 sm:pt-0 lg:col-start-3 xl:col-start-3 xl:justify-self-start"
     >
       <div className="flex w-full flex-col lg:flex-row-reverse">
-        <div className="shadow-lg dark:shadow-slate-600">
-          <Image src={img} placeholder="blur" alt={alt} />
+        <div className="">
+          <Image
+            src={img}
+            placeholder="blur"
+            className="shadow-lg shadow-slate-600 dark:shadow-slate-600"
+            alt={alt}
+          />
         </div>
 
         <div className="flex flex-col justify-between gap-2  py-4 lg:w-4/5  lg:max-w-2xl xl:px-7 xl:py-7">
