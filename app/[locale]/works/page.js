@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Project } from "./components/project";
-import { NavBar } from "./components/navBar";
+import { ProjectsWrapper } from "./components/projectsWrapper";
 import edenPic from "../images/eden.png";
 import plantCopyPic from "../images/plantcopy.png";
 
@@ -8,8 +7,33 @@ export default function Works() {
   const eden = useTranslations("Eden");
   const plantCopy = useTranslations("PlantCopy");
   return (
-    <section className="grid h-[100svh] max-h-[100svh] grid-cols-12">
-      <NavBar />
+    <ProjectsWrapper
+      edenTitle={eden("title")}
+      edenSubtitle={eden("subtitle")}
+      edenBody={eden("body")}
+      edenLaunch={eden("launch")}
+      edenLaunchDate={eden("launchDate")}
+      edenDev={eden("dev")}
+      edenDevTech={eden("devTech")}
+      edenCategory={eden("category")}
+      edenCategorySite={eden("categorySite")}
+      edenSiteName={eden("siteName")}
+      edenSiteHref={eden("siteHref")}
+      edenPic={edenPic}
+      plantCopyTitle={plantCopy("title")}
+      plantCopySubtitle={plantCopy("subtitle")}
+      plantCopyBody={plantCopy("body")}
+      plantCopyLaunch={plantCopy("launch")}
+      plantCopyLaunchDate={plantCopy("launchDate")}
+      plantCopyDev={plantCopy("dev")}
+      plantCopyDevTech={plantCopy("devTech")}
+      plantCopyCategory={plantCopy("category")}
+      plantCopyCategorySite={plantCopy("categorySite")}
+      plantCopySiteName={plantCopy("siteName")}
+      plantCopySiteHref={plantCopy("siteHref")}
+      plantCopyPic={plantCopyPic}
+    >
+      {/* <NavBar />
       <Project
         title={eden("title")}
         subtitle={eden("subtitle")}
@@ -37,7 +61,7 @@ export default function Works() {
         siteName={plantCopy("siteName")}
         siteHref={plantCopy("siteHref")}
         img={plantCopyPic}
-      />
-    </section>
+      /> */}
+    </ProjectsWrapper>
   );
 }
