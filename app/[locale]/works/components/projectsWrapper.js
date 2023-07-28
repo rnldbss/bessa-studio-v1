@@ -48,7 +48,7 @@ export function ProjectsWrapper({
 
   console.log(activeProject);
   return (
-    <section className="grid h-[100svh] max-h-[100svh] grid-cols-12">
+    <section className="grid min-h-[100dvh] grid-cols-12 place-content-center gap-y-5">
       <div
         className="relative z-20 col-start-2 col-end-12
     flex w-4/5 flex-col gap-2 justify-self-center sm:col-end-3  sm:ml-2 sm:h-1/2 sm:flex-row-reverse sm:self-center sm:justify-self-start"
