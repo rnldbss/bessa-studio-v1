@@ -42,21 +42,21 @@ export function Project({
           <p>{body}</p>
           <ul className="flex gap-3">
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-600">
+              <span className="dark:text- text-sm font-medium text-violet-800">
                 {launch}
               </span>
               <br />
               {launchDate}
             </li>
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-600">
+              <span className="dark:text- text-sm font-medium text-violet-800">
                 {dev}{" "}
               </span>
               <br />
               {devTech}
             </li>
             <li>
-              <span className="dark:text- text-sm font-medium text-violet-600">
+              <span className="dark:text- text-sm font-medium text-violet-800">
                 {category}
               </span>
               <br />

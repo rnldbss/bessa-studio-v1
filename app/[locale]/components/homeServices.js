@@ -66,7 +66,7 @@ export function Services({ secTitle, secBodyOne }) {
           </h2>
         </div>
 
-        <div className="col-start-2 col-end-12 flex flex-col  sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
+        <div className="col-start-2 col-end-12 flex flex-col gap-16  sm:col-start-7 sm:col-end-12 lg:col-end-11  xl:col-end-10">
           <div
             id="body"
             className="flex flex-col justify-center text-xl sm:min-h-[60lvh]"
@@ -74,10 +74,10 @@ export function Services({ secTitle, secBodyOne }) {
             <p>{secBodyOne}</p>
           </div>
           <div className="flex  flex-col justify-center sm:min-h-[60lvh]">
-            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-600 lg:text-4xl">
+            <h3 className=" text-3xl font-semibold text-violet-800 dark:text-violet-600 lg:text-4xl">
               Lorem ipsum dolor sit amet.
             </h3>
-            <p>
+            <p className="text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quo
               consectetur facilis deleniti itaque ratione exercitationem
               officia! Illum, voluptatem assumenda.
@@ -87,10 +87,10 @@ export function Services({ secTitle, secBodyOne }) {
             id="endTrigger"
             className="flex  flex-col justify-center sm:min-h-[60lvh]"
           >
-            <h3 className=" text-3xl font-semibold text-violet-700 dark:text-violet-600 lg:text-4xl">
+            <h3 className=" text-3xl font-semibold text-violet-800 dark:text-violet-600 lg:text-4xl">
               Lorem ipsum dolor sit amet.
             </h3>
-            <p>
+            <p className="text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quo
               consectetur facilis deleniti itaque ratione exercitationem
               officia! Illum, voluptatem assumenda.
