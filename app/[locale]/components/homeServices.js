@@ -5,7 +5,14 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function Services({ secTitle, secBodyOne }) {
+export function Services({
+  secTitle,
+  secBodyOne,
+  secFeatTitleOne,
+  secFeatBodyOne,
+  secFeatTitleTwo,
+  secFeatBodyTwo,
+}) {
   const servicesRef = useRef();
 
   useLayoutEffect(() => {
@@ -75,26 +82,18 @@ export function Services({ secTitle, secBodyOne }) {
           </div>
           <div className="flex  flex-col justify-center sm:min-h-[60lvh]">
             <h3 className=" text-3xl font-semibold text-violet-800 dark:text-violet-600 lg:text-4xl">
-              Lorem ipsum dolor sit amet.
+              {secFeatTitleOne}
             </h3>
-            <p className="text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quo
-              consectetur facilis deleniti itaque ratione exercitationem
-              officia! Illum, voluptatem assumenda.
-            </p>
+            <p className="text-lg">{secFeatBodyOne}</p>
           </div>
           <div
             id="endTrigger"
             className="flex  flex-col justify-center sm:min-h-[60lvh]"
           >
             <h3 className=" text-3xl font-semibold text-violet-800 dark:text-violet-600 lg:text-4xl">
-              Lorem ipsum dolor sit amet.
+              {secFeatTitleTwo}
             </h3>
-            <p className="text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quo
-              consectetur facilis deleniti itaque ratione exercitationem
-              officia! Illum, voluptatem assumenda.
-            </p>
+            <p className="text-lg">{secFeatBodyTwo}</p>
           </div>
         </div>
       </div>
