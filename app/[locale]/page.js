@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
-
 import Link from "next/link";
 import ScrollIndicator from "./components/scrollIndicator";
-
+import { ContactForm } from "./components/form";
 import { Services } from "./components/homeServices";
 
 export default function Index() {
   const t = useTranslations("Index");
+  const form = useTranslations("Form");
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Index() {
             </li>
           </ul>
         </div>
-        {/* <ScrollIndicator /> */}
+        <ScrollIndicator />
       </section>
       <Services
         secTitle={t("fSecTitle")}
@@ -51,6 +51,16 @@ export default function Index() {
         secFeatTitleTwo={t("tSecFeatTitleTwo")}
         secFeatBodyTwo={t("tSecFeatBodyTwo")}
       />
+      <section className="relative z-20 my-10 grid min-h-[70lvh] grid-cols-12 content-center">
+        <div className="col-start-2 col-end-12 flex items-center justify-center bg-slate-200 bg-opacity-60 py-20 shadow-lg shadow-slate-700 dark:bg-gray-950 dark:bg-opacity-60 sm:col-start-3 sm:px-10 xl:col-end-10">
+          <ContactForm
+            formTitle={form("title")}
+            formMessage={form("message")}
+            formName={form("name")}
+            formEmail={form("email")}
+          />
+        </div>
+      </section>
     </>
   );
 }

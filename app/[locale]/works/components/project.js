@@ -29,7 +29,7 @@ export function Project({
       variants={variants}
       initial={inital}
       transition={{ duration: 0.6 }}
-      className="relative z-20 col-start-2 col-end-12 row-start-1 row-end-1  flex max-w-[1150px] flex-col justify-center gap-4 pt-12 sm:col-start-3 sm:pt-0 lg:col-start-3 xl:col-start-3 xl:justify-self-start"
+      className="relative z-20 col-start-2 col-end-12 row-start-1 row-end-1  flex max-w-[1150px] flex-col justify-center gap-4 pt-20 sm:col-start-3 sm:pt-0 lg:col-start-3 xl:col-start-3 xl:justify-self-start"
     >
       <div className="flex w-full flex-col lg:flex-row-reverse">
         <div className="">

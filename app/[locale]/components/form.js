@@ -11,6 +11,7 @@ export const ContactForm = ({
   formName,
   formTitle,
   formEmail,
+  formContainerClass,
 }) => {
   const [isSubmitted, setSubmitted] = useState(false);
   const [message, setMessage] = useState("");
@@ -57,7 +58,9 @@ export const ContactForm = ({
   };
 
   return isSubmitted ? (
-    <div className="flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3">
+    <div
+      className={`${formContainerClass}flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3`}
+    >
       <motion.span
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
@@ -108,7 +111,7 @@ export const ContactForm = ({
             {formName}
           </label>
           <input
-            className="bg-transparent outline-none"
+            className="mb-12 bg-transparent outline-none"
             id="name"
             type="text"
             placeholder="name"
@@ -128,7 +131,7 @@ export const ContactForm = ({
             {formEmail}
           </label>
           <input
-            className="bg-transparent outline-none"
+            className="mb-12 bg-transparent outline-none"
             id="email"
             type="email"
             placeholder="example@gmail.com"

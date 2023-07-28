@@ -42,7 +42,7 @@ export function Nav() {
             <Link href="/works">works</Link>
           </li>
           <li>
-            <Link href="/works">about</Link>
+            <Link href="/about">about</Link>
           </li>
         </ul>
 
@@ -98,7 +98,7 @@ export function Nav() {
             </Link>
           </motion.li>
           <motion.li id="mobNavItems">
-            <Link onClick={() => cycleOpenNav()} href="/works">
+            <Link onClick={() => cycleOpenNav()} href="/about">
               about
             </Link>
           </motion.li>

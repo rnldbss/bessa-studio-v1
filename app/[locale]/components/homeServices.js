@@ -53,7 +53,7 @@ export function Services({
           },
           autoAlpha: 0,
           yPercent: 30,
-          duration: 1,
+          duration: 1.2,
         });
         gsap.from("#two", {
           scrollTrigger: {
@@ -62,7 +62,7 @@ export function Services({
           },
           autoAlpha: 0,
           yPercent: 30,
-          duration: 1,
+          duration: 1.2,
         });
         gsap.from("#endTrigger", {
           scrollTrigger: {
@@ -71,7 +71,7 @@ export function Services({
           },
           autoAlpha: 0,
           yPercent: 30,
-          duration: 1,
+          duration: 1.2,
         });
       },
     );

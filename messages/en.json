@@ -44,7 +44,7 @@
   "PlantCopy": {
     "title": "Plant Copy",
     "subtitle": "Freelance Copywriter",
-    "body": "Plant Copy provides copywriting services to sustainable brands. They needed a cohesive website that described their background, services, and drove visitors to contact them through their form. My goal was to make the transition to the contact form as natural as possible, as well as create a design that embodied the green and environmental style of the brand. I also added a content management system, making it easy for them to upload content and edit their website whenever they see fit.",
+    "body": "Plant Copy provides copywriting services to sustainable brands. They needed a cohesive website that described their background, services, and drove visitors to contact them through their form. My goal was to make the transition to the contact form as natural as possible, as well as create a design that embodied the green and environmental style of the brand.",
     "launch": "launched:",
     "launchDate": "2023",
     "dev": "development:",
@@ -55,8 +55,13 @@
     "siteHref": "https://plantcopy.com"
   },
 
+  "about": {
+    "title": "About",
+    "body": "Plant Copy provides copywriting services to sustainable brands. They needed a cohesive website that described their background, services, and drove visitors to contact them through their form. My goal was to make the transition to the contact form as natural as possible, as well as create a design that embodied the green and environmental style of the brand. I also added a content management system, making it easy for them to upload content and edit their website whenever they see fit."
+  },
+
   "Form": {
-    "title": "Let's build your website",
+    "title": "Let's build your website!",
     "message": "Tell me briefly what you need",
     "name": "Name",
     "email": "Email"
