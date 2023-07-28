@@ -104,8 +104,8 @@ export function ProjectsWrapper({
         img={edenPic}
       />
       <Project
-        animate={activeProject === 1 ? { opacity: 1 } : ""}
-        inital={{ opacity: 0 }}
+        animate={activeProject === 1 ? { opacity: 1, display: "flex" } : ""}
+        inital={{ opacity: 0, display: "none" }}
         activeProject={activeProject === 0 ? true : false}
         title={plantCopyTitle}
         subtitle={plantCopySubtitle}

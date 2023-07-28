@@ -39,7 +39,7 @@ export function Project({
         <div className="flex flex-col justify-between gap-2  py-4 lg:w-4/5  lg:max-w-2xl xl:px-7 xl:py-7">
           <h2 className="text-3xl font-semibold lg:text-4xl">{title}</h2>
           <h3 className="text-xl font-medium lg:text-2xl">{subtitle}</h3>
-          <p>{body}</p>
+          <p className="text-lg">{body}</p>
           <ul className="flex gap-3">
             <li>
               <span className="dark:text- text-sm font-medium text-violet-800">
