@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.23",
+    "@vercel/analytics": "^1.0.1",
     "autoprefixer": "10.4.14",
     "form-data": "^4.0.0",
     "framer-motion": "^10.13.0",

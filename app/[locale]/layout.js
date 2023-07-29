@@ -9,6 +9,7 @@ import { MailMe } from "./components/mailMe";
 import { Social } from "./components/social";
 import { Providers } from "./constants/providers";
 import { Ball } from "./components/ball";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   applicationName: "bessa.dev",
@@ -82,6 +83,7 @@ export default function LocaleLayout({ children, params }) {
             </main>
           </Providers>
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
