@@ -59,7 +59,7 @@ export const ContactForm = ({
 
   return isSubmitted ? (
     <div
-      className={`${formContainerClass}flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3`}
+      className={`${formContainerClass} flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3`}
     >
       <motion.span
         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export const ContactForm = ({
       </motion.span>
     </div>
   ) : (
-    <div className="flex w-2/3 flex-col gap-20 sm:w-4/5 xl:w-2/3">
+    <div className="flex w-3/4 flex-col gap-20 sm:w-4/5 xl:w-2/3">
       <h2 id="formItems" className="text-5xl font-semibold">
         {formTitle}
       </h2>
