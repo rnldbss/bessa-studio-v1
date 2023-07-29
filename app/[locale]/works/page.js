@@ -3,6 +3,14 @@ import { ProjectsWrapper } from "./components/projectsWrapper";
 import edenPic from "../images/eden.png";
 import plantCopyPic from "../images/plantcopy.png";
 
+export const metadata = {
+  title: "Works",
+  description: "Works",
+  alternates: {
+    canonical: "/works",
+  },
+};
+
 export default function Works() {
   const eden = useTranslations("Eden");
   const plantCopy = useTranslations("PlantCopy");

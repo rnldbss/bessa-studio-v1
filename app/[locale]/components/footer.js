@@ -17,7 +17,7 @@ export function Footer() {
           />
         </div>
         <div className="flex flex-col justify-between gap-2">
-          <div className="flex  flex-col items-center gap-2 rounded-lg bg-slate-200 bg-opacity-20 px-3 py-3 sm:px-8 xl:flex-row">
+          <div className="flex  flex-col items-center gap-2 rounded-lg bg-slate-200 bg-opacity-70 px-3 py-3 dark:bg-slate-200 dark:bg-opacity-20 sm:px-8 xl:flex-row">
             <div className="h-40 w-40 shrink-0 overflow-hidden rounded-full">
               <Image
                 src={mePic}

@@ -1,8 +1,13 @@
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
 import Link from "next/link";
 import ScrollIndicator from "./components/scrollIndicator";
 import { Footer } from "./components/footer";
 import { Services } from "./components/homeServices";
+
+export const metadata = {
+  
+}
 
 export default function Index() {
   const t = useTranslations("Index");

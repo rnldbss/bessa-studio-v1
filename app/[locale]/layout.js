@@ -10,6 +10,48 @@ import { Social } from "./components/social";
 import { Providers } from "./constants/providers";
 import { Ball } from "./components/ball";
 
+export const metadata = {
+  applicationName: "bessa.dev",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Website for retreats", "Web Design", "Web Developer"],
+  authors: { name: "Ronald Bessa", url: "https://www.bessa.dev" },
+  colorScheme: "dark",
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.bessa.dev"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      pt: "/pt",
+    },
+  },
+  openGraph: {
+    title: "Bessa Creative Websites",
+    description: "Website for retreats",
+    url: "https://www.bessa.dev",
+    siteName: "Bessa.dev",
+    images: [
+      {
+        url: "https://www.bessa.dev/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: "https://www.bessa.dev/og-image-sm.png",
+        width: 256,
+        height: 256,
+        alt: "My custom alt",
+      },
+    ],
+    locale: "en",
+    type: "website",
+  },
+};
+
 const workSans = Work_Sans({ subsets: ["latin"] });
 
 export default function LocaleLayout({ children, params }) {

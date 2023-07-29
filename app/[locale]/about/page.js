@@ -3,6 +3,14 @@ import mePic from "../images/me.jpg";
 import { useTranslations } from "next-intl";
 import { Footer } from "../components/footer";
 
+export const metadata = {
+  title: "About",
+  description: "about",
+  alternates: {
+    canonical: "/about",
+  },
+};
+
 export default function About() {
   const about = useTranslations("about");
   const form = useTranslations("Form");
