@@ -5,9 +5,7 @@ import ScrollIndicator from "./components/scrollIndicator";
 import { Footer } from "./components/footer";
 import { Services } from "./components/homeServices";
 
-export const metadata = {
-  
-}
+export const metadata = {};
 
 export default function Index() {
   const t = useTranslations("Index");
@@ -20,7 +18,7 @@ export default function Index() {
           <h1 className="text-4xl font-semibold sm:text-5xl lg:text-6xl">
             {t("title")}
           </h1>
-          <p className="text-2xl font-medium">{t("subheading")}</p>
+          <p className="text-2xl italic">{t("subheading")}</p>
           <ul className="flex gap-3 text-lg underline ">
             <li className="hover:text-slate-300">
               <Link href="/works">{t("linkOne")}</Link>
