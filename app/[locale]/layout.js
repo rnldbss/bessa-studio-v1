@@ -65,7 +65,7 @@ export default function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className=" dark:bg-black dark:text-white">
+      <body className=" dark:bg-gray-950 dark:text-white">
         <SmoothScroll>
           <Providers>
             <main className={`${workSans.className}`}>

@@ -16,21 +16,18 @@ export default function About() {
   const form = useTranslations("Form");
   return (
     <>
-      <section className="relative z-30 grid min-h-[100lvh] grid-cols-12 place-content-center">
-        <div className="col-start-2 col-end-12 flex min-h-[100lvh] flex-col items-center gap-10 pt-20 sm:col-start-3 sm:flex-row sm:gap-20 sm:pt-0">
-          <div className="max-w-[350px]">
+      <section className="relative z-30 grid min-h-[100lvh] grid-cols-12 justify-items-center">
+        <div className="col-start-2 col-end-12 flex min-h-[100lvh] flex-col gap-10 pt-20 sm:col-start-3 sm:gap-20 md:flex-row md:gap-6  lg:items-center lg:gap-8">
+          <div className="mb-auto max-w-[350px] lg:mb-0">
             <Image
               src={mePic}
               className="shadow-lg shadow-slate-600"
               alt="me"
             />
           </div>
-          <div className=" flex max-w-[800px] flex-col gap-3">
+          <div className=" flex w-full flex-col gap-3 md:max-w-[350px] lg:max-w-[800px]">
             <h1 className="text-4xl sm:text-6xl">{about("title")}</h1>
-            <p className="text-2xl sm:text-3xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              incidunt adipisci accusantium consectetur.
-            </p>
+            <p className="text-2xl sm:text-3xl">{about("subtitle")}</p>
             <p className="text-lg">{about("body")}</p>
           </div>
         </div>
