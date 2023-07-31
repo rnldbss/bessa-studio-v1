@@ -4,8 +4,9 @@ import { useTranslations } from "next-intl";
 import { Footer } from "../components/footer";
 
 export const metadata = {
-  title: "About",
-  description: "about",
+  title: "Web Developer for Retreat Centers | About me",
+  description:
+    "Ronald Bessa is a web developer specializing in creative web design for retreat centers. Click here to find out more.",
   alternates: {
     canonical: "/about",
   },

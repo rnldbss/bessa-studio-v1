@@ -26,7 +26,7 @@ function useMenuAnimation(openNav) {
   return scope;
 }
 
-export function Nav() {
+export function Nav({home, works, about}) {
   const [openNav, cycleOpenNav] = useCycle(false, true);
   const scope = useMenuAnimation(openNav);
 
@@ -36,13 +36,13 @@ export function Nav() {
         <ThemeButton />
         <ul className=" flex items-center gap-8 uppercase">
           <li>
-            <Link href="/">home</Link>
+            <Link href="/">{home}</Link>
           </li>
           <li>
-            <Link href="/works">works</Link>
+            <Link href="/works">{works}</Link>
           </li>
           <li>
-            <Link href="/about">about</Link>
+            <Link href="/about">{about}</Link>
           </li>
         </ul>
 

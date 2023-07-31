@@ -27,9 +27,10 @@ export function Footer() {
             </div>
             <div>
               <p className="min-w-[200px] max-w-[400px]">
-                Hey <br /> Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Est rem rerum, quis magni beatae harum quibusdam laborum.
-                &#128075;
+                Hey!
+                <br />
+                I’m excited to work together. Please just fill this form out and
+                I’ll be in touch shortly. &#128075;
               </p>
             </div>
           </div>

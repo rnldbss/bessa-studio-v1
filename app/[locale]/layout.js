@@ -58,6 +58,7 @@ const workSans = Work_Sans({ subsets: ["latin"] });
 export default function LocaleLayout({ children, params }) {
   const locale = useLocale();
   const form = useTranslations("Form");
+  const nav = useTranslations("Nav");
 
   // Show a 404 error if the user requests an unknown locale
   if (params.locale !== locale) {
@@ -70,7 +71,11 @@ export default function LocaleLayout({ children, params }) {
         <SmoothScroll>
           <Providers>
             <main className={`${workSans.className}`}>
-              <Nav />
+              <Nav
+                home={nav("home")}
+                works={nav("works")}
+                about={nav("about")}
+              />
               <MailMe
                 formTitle={form("title")}
                 formMessage={form("message")}

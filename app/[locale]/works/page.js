@@ -5,8 +5,9 @@ import edenPic from "../images/eden.png";
 import plantCopyPic from "../images/plantcopy.png";
 
 export const metadata = {
-  title: "Works",
-  description: "Works",
+  title: "Web Development for Retreat Centers | Portfolio",
+  description:
+    "Creative web development and web design for retreat centers. Want to set yourself apart from the crowd? Click here to check out my portfolio.",
   alternates: {
     canonical: "/works",
   },

@@ -1,9 +1,4 @@
 {
-  "Nav": {
-    "linkOne": "home",
-    "linkTwo": "projetos",
-    "linkThree": "sobre"
-  },
   "Index": {
     "title": "Mostre que o seu centro de retiros é o lugar perfeito para transformação",
     "subheading": "Com design elegante e focado em conversões",
@@ -68,5 +63,10 @@
     "message": "Me conte brevemente como posso te ajudar",
     "name": "Nome",
     "email": "Email"
+  },
+  "Nav": {
+    "home": "home",
+    "works": "projetos",
+    "about": "sobre"
   }
 }

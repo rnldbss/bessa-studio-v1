@@ -1,9 +1,4 @@
 {
-  "Nav": {
-    "linkOne": "home",
-    "linkTwo": "works",
-    "linkThree": "about"
-  },
   "Index": {
     "title": "Show them your retreat center is the perfect place for transformation",
     "subheading": "With stylish and conversion-driven web design",
@@ -66,5 +61,10 @@
     "message": "Tell me briefly what you need",
     "name": "Name",
     "email": "Email"
+  },
+  "Nav": {
+    "home": "home",
+    "works": "works",
+    "about": "about"
   }
 }

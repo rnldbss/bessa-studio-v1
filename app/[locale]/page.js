@@ -5,7 +5,11 @@ import ScrollIndicator from "./components/scrollIndicator";
 import { Footer } from "./components/footer";
 import { Services } from "./components/homeServices";
 
-export const metadata = {};
+export const metadata = {
+  title: "Web Design for Retreat Centers | Homepage",
+  description:
+    "Creative web design for retreat centers that want to increase bookings. Click to find out more.",
+};
 
 export default function Index() {
   const t = useTranslations("Index");
