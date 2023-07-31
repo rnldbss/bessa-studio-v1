@@ -51,7 +51,7 @@ export function ProjectsWrapper({
     <section className="grid min-h-[100lvh] grid-cols-12 place-content-center gap-y-5">
       <div
         className="relative z-20 col-start-2 col-end-12
-    flex w-4/5 flex-col gap-2 justify-self-center sm:col-end-3  sm:ml-2 sm:h-1/2 sm:flex-row-reverse sm:self-center sm:justify-self-start"
+    flex h-11 w-4/5 flex-col gap-2 justify-self-center sm:col-end-3  sm:ml-2 sm:h-1/2 sm:flex-row-reverse sm:self-center sm:justify-self-start"
       >
         <div className=" flex h-0.5 w-full  shrink-0  sm:h-full sm:w-0.5 sm:flex-col">
           <motion.div
