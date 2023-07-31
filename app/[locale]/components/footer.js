@@ -4,6 +4,7 @@ import Image from "next/image";
 import mePic from "../images/me.jpg";
 
 export function Footer() {
+  const year = new Date().getFullYear();
   const form = useTranslations("Form");
   return (
     <footer className="relative z-20 grid grid-cols-12">
@@ -34,7 +35,9 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <small className="ml-auto">All rigths reserved, bessa.dev.</small>
+          <small className="ml-auto">
+            &#169; {year} bessa.dev. All rights reserved.
+          </small>
         </div>
       </div>
     </footer>
