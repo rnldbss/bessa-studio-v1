@@ -26,7 +26,7 @@ function useMenuAnimation(openNav) {
   return scope;
 }
 
-export function Nav({home, works, about}) {
+export function Nav({ home, works, about }) {
   const [openNav, cycleOpenNav] = useCycle(false, true);
   const scope = useMenuAnimation(openNav);
 
@@ -105,10 +105,14 @@ export function Nav({home, works, about}) {
         </ul>
         <motion.ul className="flex gap-4 text-3xl ">
           <li id="mobNavItems">
-            <BsLinkedin />
+            <a href="https://www.linkedin.com/in/ronaldbessa/" target="_blank">
+              <BsLinkedin />
+            </a>
           </li>
           <li id="mobNavItems">
-            <BsGithub />
+            <a href="https://github.com/rnldbss" target="_blank">
+              <BsGithub />
+            </a>
           </li>
         </motion.ul>
       </motion.div>
