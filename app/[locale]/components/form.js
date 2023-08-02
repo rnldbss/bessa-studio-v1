@@ -91,7 +91,7 @@ export const ContactForm = ({
             {formMessage}
           </label>
           <textarea
-            className="bg-transparent outline-none"
+            className="bg-transparent text-white outline-none"
             placeholder="Type here"
             rows={3}
             id="message"
