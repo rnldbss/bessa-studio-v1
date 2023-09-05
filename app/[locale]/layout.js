@@ -70,7 +70,7 @@ export default function LocaleLayout({ children, params }) {
       <body className=" dark:bg-gray-950 dark:text-white">
         <SmoothScroll>
           <Providers>
-            <main className={`${workSans.className}`}>
+            <main className={`${workSans.className} `}>
               <Nav
                 home={nav("home")}
                 works={nav("works")}

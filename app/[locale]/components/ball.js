@@ -86,6 +86,7 @@ export function Ball() {
         className="pointer-events-none fixed left-0 top-0 -z-20 aspect-square h-[25vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-indigo-600 to-green-600 opacity-80"
       ></div>
       <div className="max-w-screen  min-w fixed left-0 top-0 z-10 max-h-[100lvh] min-h-[100dvh] min-w-full backdrop-blur-[9vmax]"></div>
+      <div className="max-w-screen  min-w dark:dark-pattern light-pattern fixed left-0 top-0 z-10 max-h-[100lvh] min-h-[100dvh] min-w-full"></div>
     </>
   );
 }

@@ -16,3 +16,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+@layer utilities {
+  .dark-pattern {
+    background-image: url(./images/dark-pattern.svg);
+    background-repeat: repeat;
+  }
+
+  .light-pattern {
+    background-image: url(./images/light-pattern.svg);
+    background-repeat: repeat;
+  }
+}
